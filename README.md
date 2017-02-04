@@ -9,6 +9,14 @@ just give your source code file name as input to the compile command to obtain t
 
     $ compile filename.cpp
     .
-    OUTPUT OF YOUR EXECUTION program
+    OUTPUT OF YOUR EXECUTING program
+    .
+    $
+
+same can be done in case of c program.
+
+    $ compile c_file_name.c
+    .
+    OUTPUT OF YOUR EXECUTING program
     .
     $
