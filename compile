@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+# compile
+# https://github.com/jubinmathew1995/compile
+#
+# Generates output of the executed program file.
+#
+# Examples:
+#
+#   $ compile file_name.cpp
+#   $ compile file_name.c
+
+# Generates .
+#
+# $1 - filename which we have to execute.
+
+g++ $1
+./a.out
+rm a.out
