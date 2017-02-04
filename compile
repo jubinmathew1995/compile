@@ -13,10 +13,20 @@
 # Generates .
 #
 # $1 - filename which we have to execute.
-
-g++ $1
-if [ $? -eq 0 ] # if any error NOT occured then execute the object file.
+if [ $# -eq 1 ]
 then
-  ./a.out # execute the object file.
-  rm a.out  # remove the executed object file.
+  if [ ${1: -4} == ".cpp" ]
+  then
+    g++ $1
+  elif [ ${1: -2} == ".c" ]
+  then
+    gcc $1
+  else
+    echo "Unrecognised file extension. "
+  fi
+  if [ $? -eq 0 ] # if any error NOT occured then execute the object file.
+  then
+    ./a.out # execute the object file.
+    rm a.out  # remove the executed object file.
+  fi
 fi
