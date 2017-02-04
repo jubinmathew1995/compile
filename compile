@@ -15,5 +15,8 @@
 # $1 - filename which we have to execute.
 
 g++ $1
-./a.out
-rm a.out
+if [ $? -eq 0 ] # if any error NOT occured then execute the object file.
+then
+  ./a.out # execute the object file.
+  rm a.out  # remove the executed object file.
+fi
