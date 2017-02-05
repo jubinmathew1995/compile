@@ -10,10 +10,26 @@
 #   $ compile file_name.cpp
 #   $ compile file_name.c
 
-# Generates .
-#
-# $1 - filename which we have to execute.
+  help()
+  {
+    cat <<EOF
+    
+    USAGE:
+      $ compile [-h|--help] FILENAME,...
 
+    EXAMPLES:
+      $ compile file_name.cpp
+
+      $ compile file_name.c
+EOF
+  }
+
+  # show help for no arguments if stdin is a terminal
+  if [ $# -eq 0 ] || [ "$1" == '-h' ] || [ "$1" == '--help' ]
+  then
+    help
+    exit 0
+  fi
 
 if [ $# -eq 1 ] # when only single file is send for execution.
 then
