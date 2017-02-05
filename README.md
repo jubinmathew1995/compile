@@ -14,7 +14,7 @@ compile command helps to compile and execute your c/c++ program directly using a
 ```
 
 ### install
-spark is a shell script, so drop it somewhere and make sure it's added to your $PATH. Or you can use the following one-liner:
+compile is a shell script, so drop it somewhere and make sure it's added to your $PATH. Or you can use the following one-liner:
 
 ```
 sudo sh -c "curl https://raw.githubusercontent.com/jubinmathew1995/compile/master/compile -o /usr/local/bin/compile && chmod +x /usr/local/bin/compile"
