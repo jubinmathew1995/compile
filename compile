@@ -13,7 +13,7 @@
   help()
   {
     cat <<EOF
-    
+
     USAGE:
       $ compile [-h|--help] FILENAME,...
 
@@ -33,10 +33,10 @@ EOF
 
 if [ $# -eq 1 ] # when only single file is send for execution.
 then
-  if [ ${1: -4} == ".cpp" ] # checking extension for execution
+  if [[ ${1: -4} == ".cpp" ]] # checking extension for execution
   then
     g++ $1 -o /home/$USER/a.out   # generating the object file in the current working directory.
-  elif [ ${1: -2} == ".c" ] # checking extension for execution
+  elif [[ ${1: -2} == ".c" ]] # checking extension for execution
   then
     gcc $1 -o /home/$USER/a.out   # generating the object file in the current working directory.
   else
