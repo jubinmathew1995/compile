@@ -8,9 +8,14 @@ compile command helps to compile and execute your c/c++ program directly using a
 * g++
 * gcc
 
+#### for Debian / Ubuntu / Debian derivatives
 ```
   apt-get install g++
   apt-get install gcc
+```
+#### for Arch Linux / arch derivatives
+```
+sudo pacman -Sy base-devel
 ```
 
 ### install
