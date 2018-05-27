@@ -35,10 +35,10 @@ if [ $# -eq 1 ] # when only single file is send for execution.
 then
   if [[ ${1: -4} == ".cpp" ]] # checking extension for execution
   then
-    g++ $1 -o $PWD/a.out   # generating the object file in the current working directory.
+    g++ --std=c++14 $1 -o $PWD/a.out   # generating the object file in the current working directory.
   elif [[ ${1: -2} == ".c" ]] # checking extension for execution
   then
-    gcc $1 -o $PWD/a.out   # generating the object file in the current working directory.
+    gcc --std=c11 $1 -o $PWD/a.out   # generating the object file in the current working directory.
   else
     echo "Unrecognised file extension."
     exit
